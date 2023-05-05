@@ -1,7 +1,10 @@
 export default function Home() {
   return (
-    <div>
-      <h1>Inicio</h1>
+
+    <div className="h-screen">
+      <div>
+        <main>Home</main>
+      </div>
     </div>
   )
 }

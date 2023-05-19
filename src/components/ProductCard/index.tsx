@@ -12,10 +12,14 @@ interface ProductCardProps {
 export function ProductCard({ imageUrl, name, price, id }: ProductCardProps) {
     return (
         <Link href={`/product/${id}`} passHref>
-            <Image className="w-64 h-75"
-                src={imageUrl}
-                alt={`imagem ${name}`}
-            />
+            <div className="w-200 h-72">
+                <Image
+                    className="object-cover w-full h-full"
+                    src={imageUrl}
+                    alt={`imagem ${name}`}
+                    layout="fill"
+                />
+            </div>
             <div>
                 <p>{name}</p>
                 <strong>{price}</strong>
@@ -23,6 +27,7 @@ export function ProductCard({ imageUrl, name, price, id }: ProductCardProps) {
         </Link>
     );
 }
+
 
 
 // import React from "react";

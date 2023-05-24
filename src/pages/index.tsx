@@ -39,15 +39,15 @@ export default function Home() {
   }
 
   return (
-    <div className="h-screen">
-      <div>
-        <main>
-          <div className="flex flex-col items-center justify-center min-h-screen py-2">
-            <h1>Produtos</h1>
-            {productCards}
-          </div>
-        </main>
-      </div>
+    <div className="flex w-full h-screen justify-center">
+
+      <main>
+        <h1 className='pt-8 pl-8'>TODOS OS PRODUTOS  |  CAMISETAS  |  CANECAS</h1>
+        <div className="max-w-1120 w-full h-full grid grid-cols-4 py-6 px-3">
+
+          {productCards}
+        </div>
+      </main>
     </div>
   );
 }

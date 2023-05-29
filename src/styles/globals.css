@@ -1,3 +1,10 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+    --border-radius: 12px;
+    --bg-secondary: #f3f5f6;
+    --text-dark: #737380;
+
+}

@@ -1,0 +1,29 @@
+import { FilterType } from "@/types/filter-types";
+import React, { ReactNode, useState, createContext } from "react";
+
+
+export const FilterContext = createContext({
+    search: '',
+    page: 0,
+    type: FilterType.All,
+    setSearch: (value: string) => { },
+    setPage: (value: number) => { },
+    setType: (value: FilterType) => { }
+});
+
+interface ProviderProps {
+    children: ReactNode;
+}
+
+export function FilterContextProvider({ children }: ProviderProps) {
+    const [search, setSearch] = useState('');
+    const [page, setPage] = useState(0);
+    const [type, setType] = useState(FilterType.All);
+
+
+    return (
+        <FilterContext.Provider value={{ search, page, type, setSearch, setPage, setType }}>
+            {children}
+        </FilterContext.Provider>
+    )
+}

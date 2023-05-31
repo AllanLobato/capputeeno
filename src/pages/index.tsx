@@ -1,6 +1,7 @@
 import { useQuery, gql } from '@apollo/client';
 import { ProductCard } from '@/components/ProductCard';
 import { Product } from '@/models/Product';
+import { FilterBar } from '@/components/filter-bar';
 
 const GET_DATA = gql`
   query Product {
@@ -42,7 +43,7 @@ export default function Home() {
     <div className="flex w-full h-screen justify-center">
 
       <main>
-        <h1 className='pt-8 pl-8'>TODOS OS PRODUTOS  |  CAMISETAS  |  CANECAS</h1>
+        <FilterBar />
         <div className="max-w-1120 w-full h-full grid grid-cols-4 py-6 px-3">
 
           {productCards}

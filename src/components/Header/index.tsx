@@ -12,7 +12,7 @@ export function Header() {
         <header className='flex h-20 w-screen items-center bg-white justify-between' >
             <Image className='ml-40' src={logoImg} alt='Capputeeno' />
 
-            <div className=" flex h-6 mr-64 items-center justify-between">
+            <div className=" flex h-6 mr-40 items-center justify-between">
 
                 <label htmlFor="inputBusca" className="relative">
                     <input id="inputBusca" className="form-input bg-gray-100 rounded-lg pl-5 pr-4 py-2 w-80 h-10" type="text" placeholder="Procurando por algo específico?" />

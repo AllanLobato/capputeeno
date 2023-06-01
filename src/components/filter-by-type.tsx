@@ -1,10 +1,11 @@
-import { useContext } from "react";
-import { FilterContext } from "./contexts/filter-context";
+import { useFilter } from "@/hooks/useFilter";
+import { FilterType } from "@/types/filter-types";
 
 export function FilterByType() {
-    const { type, setType } = useContext(FilterContext);
+    const { type, setType } = useFilter();
 
-    const handleChangeType = (type: string) => {
+    const handleChangeType = (value: FilterType) => {
+        setType(value)
     }
 
     return (
@@ -12,21 +13,21 @@ export function FilterByType() {
             <li
                 className={`font-inherit font-normal text-base text-center uppercase text-text-dark hover:border-orange-low cursor-pointer transition-colors duration-200 ${type === 'All' ? 'border-b-4 border-orange-low font-bold' : ''
                     }`}
-                onClick={() => setType('All')}
+                onClick={() => handleChangeType(FilterType.All)}
             >
                 Todos os Produtos
             </li>
             <li
-                className={`font-inherit font-normal text-base text-center uppercase text-text-dark hover:border-orange-low cursor-pointer transition-colors duration-200 ${type === 'Camisetas' ? 'border-b-4 border-orange-low font-bold' : ''
+                className={`font-inherit font-normal text-base text-center uppercase text-text-dark hover:border-orange-low cursor-pointer transition-colors duration-200 ${type === 'SHIRT' ? 'border-b-4 border-orange-low font-bold' : ''
                     }`}
-                onClick={() => setType('Camisetas')}
+                onClick={() => handleChangeType(FilterType.SHIRT)}
             >
                 Camisetas
             </li>
             <li
-                className={`font-inherit font-normal text-base text-center uppercase text-text-dark hover:border-orange-low cursor-pointer transition-colors duration-200 ${type === 'Canecas' ? 'border-b-4 border-orange-low font-bold' : ''
+                className={`font-inherit font-normal text-base text-center uppercase text-text-dark hover:border-orange-low cursor-pointer transition-colors duration-200 ${type === 'MUG' ? 'border-b-4 border-orange-low font-bold' : ''
                     }`}
-                onClick={() => setType('Canecas')}
+                onClick={() => handleChangeType(FilterType.MUG)}
             >
                 Canecas
             </li>

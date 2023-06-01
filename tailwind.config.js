@@ -7,6 +7,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      zIndex: {
+        '999': 999,
+      },
       colors: {
         "secondary": '#f3f5f6',
         "text-dark": "#737380",

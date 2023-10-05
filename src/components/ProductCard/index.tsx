@@ -5,7 +5,7 @@ import Link from "next/link";
 interface ProductCardProps {
     imageUrl: string;
     name: string;
-    price: string;
+    price: number;
     id: string;
 }
 

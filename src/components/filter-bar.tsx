@@ -1,4 +1,4 @@
-import { FilterByPrioryty } from "./filter-by-priority";
+import { FilterByPriority } from "./filter-by-priority";
 import { FilterByType } from "./filter-by-type";
 
 
@@ -10,7 +10,7 @@ export function FilterBar(props: FilterBarProps) {
     return (
         <div className="flex w-full items-start ml-8 mt-8 justify-between">
             <FilterByType />
-            <FilterByPrioryty />
+            <FilterByPriority />
         </div>
     )
 }

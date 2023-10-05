@@ -7,7 +7,7 @@ interface FilterByPriorityProps {
 
 }
 
-export function FilterByPrioryty(props: FilterByPriorityProps) {
+export function FilterByPriority(props: FilterByPriorityProps) {
     const [isOpen, setIsOpen] = useState(false);
     const { setPriority } = useFilter();
 
@@ -25,6 +25,7 @@ export function FilterByPrioryty(props: FilterByPriorityProps) {
                 <div className="ml-4">
                     <ArrowIcon />
                 </div>
+                </button>
 
                 {isOpen && <ul className="absolute text-left w-64 bg-white box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1) rounded-md py-3 px-4 z-999 top-full">
                     <li onClick={() => handleUpdatePriority(PriorityTypes.NEWS)} className="text-text-dark font-normal text-sm cursor-pointer">Novidades</li>
@@ -32,7 +33,7 @@ export function FilterByPrioryty(props: FilterByPriorityProps) {
                     <li onClick={() => handleUpdatePriority(PriorityTypes.MINOR_PRICE)} className="text-text-dark font-normal text-sm cursor-pointer mt-1">Preço: Menor - maior</li>
                     <li onClick={() => handleUpdatePriority(PriorityTypes.POPULARITY)} className="text-text-dark font-normal text-sm cursor-pointer">Mais vendidos</li>
                 </ul>}
-            </button>
+            
         </div>
     )
 }

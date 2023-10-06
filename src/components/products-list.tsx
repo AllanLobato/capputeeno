@@ -1,11 +1,8 @@
 import { useProducts } from "@/hooks/useProducts";
 import { ProductCard } from "./ProductCard";
 
-interface ProductsListProps {
 
-}
-
-export function ProductsList(props : ProductsListProps) {
+export function ProductsList( ) {
     const {data} = useProducts();
     console.log(data);
     return (

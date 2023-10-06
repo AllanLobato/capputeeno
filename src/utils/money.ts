@@ -1,6 +1,4 @@
-export const formatMoney = (price: number) => {
-    return new Intl.NumberFormat("pt-BR", {
-      style: "currency",
-      currency: "BRL",
-    }).format(price);
-  };
+export function formatMoney(valueInCents: number) {
+  const formattedValue = valueInCents / 100;
+  return formattedValue.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+}

@@ -11,7 +11,7 @@ export default function Home() {
       <main>
 
         <FilterBar />
-        <div className="max-w-1120 w-full h-full grid grid-cols-4 py-6 px-3">
+        <div className="grid grid-cols-[repeat(auto-fill, 256px)] w-full h-full py-6 px-3 justify-center">
         <ProductsList />
         </div>
         
